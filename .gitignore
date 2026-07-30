@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+db.sqlite3
+
+# Virtual environment (if you have one inside the folder)
+venv/
+env/
+.env
+
+# VS Code settings
+.vscode/
