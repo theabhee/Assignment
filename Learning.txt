@@ -1,17 +1,13 @@
-# WHAT I LEARNED
+WHAT I LEARNED
 
-## 1. Problem Solving & Debugging
-
+Algorithm part
 The algorithm itself was easy since I had solved a similar problem before on Codeforces. The real difficulty was setting up my environment and switching between interpreters, plus debugging the code. I learned that keeping the architecture simple makes debugging a lot easier.
 
-## 2. Performance Optimization
-
+Query optimization
 I sort the box dimensions inside the model's save() method, so sorting happens only once — when a box is added or updated. The sorted values get stored directly in the database, so the API doesn't need to re-sort them on every request. This reduces redundant computation and speeds up API response time.
 
-## 3. Django Security (CSRF)
+Django security & middleware
+I learned how Django's CSRF (Cross-Site Request Forgery) protection works by default, and how to disable it selectively using the @csrf_exempt decorator on API endpoints that handle programmatic JSON requests from external clients, since those don't go through Django's usual form-based CSRF flow.
 
-I learned how Django's CSRF (Cross-Site Request Forgery) protection works by default, and how to disable it selectively using the `@csrf_exempt` decorator on API endpoints that handle programmatic JSON requests from external clients, since those don't go through Django's usual form-based CSRF flow.
-
-## 4. Django Models & Database Management
-
-I learned how to define relational schemas using Django's ORM, using field types like `CharField`, `IntegerField`, and `DecimalField` in `warehouse/models.py`. I also learned how to manage schema changes cleanly using `makemigrations` and `migrate`, with SQLite as the backing database.
+Database modeling & migrations
+I learned how to define relational schemas using Django's ORM, using field types like CharField, IntegerField, and DecimalField in warehouse/models.py. I also learned how to manage schema changes cleanly using makemigrations and migrate, with SQLite as the backing database.
